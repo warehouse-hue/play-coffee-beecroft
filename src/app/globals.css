@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f8f3ea;
+  --sand: #e9dcc8;
+  --terracotta: #a95f45;
+  --sage: #667b5e;
+  --espresso: #2a1e17;
+  --mist: #f2ece3;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-terracotta: var(--terracotta);
+  --color-sage: var(--sage);
+  --color-espresso: var(--espresso);
+  --color-mist: var(--mist);
+
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-fraunces);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: radial-gradient(circle at top right, #f3e6d6 0%, #f8f3ea 45%, #efe5d7 100%);
+  color: var(--espresso);
+  scroll-behavior: smooth;
+}
+
+main {
+  animation: fade-in 420ms ease-out;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-14 sm:py-16 lg:py-20;
+}
+
+.glass-card {
+  @apply rounded-2xl border border-espresso/10 bg-white/85 shadow-sm backdrop-blur;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
